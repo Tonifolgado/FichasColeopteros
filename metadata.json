@@ -1,0 +1,5 @@
+{
+  "name": "Clasificación de Coleópteros",
+  "description": "Una aplicación web visual que muestra la clasificación de los coleópteros (escarabajos), detallando las características principales y mostrando una imagen representativa de cada uno de los cuatro subórdenes.",
+  "requestFramePermissions": []
+}
