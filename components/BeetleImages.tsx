@@ -1,14 +1,13 @@
 import React from 'react';
 
-// Define props for the icon components
 interface SvgIconProps {
   className?: string;
+  hoverColorClass?: string;
 }
 
-const BeetleSvgIcon: React.FC<SvgIconProps> = ({ className }) => {
-  // Define svgProps inside the component to dynamically merge classNames
+const BeetleSvgIcon: React.FC<SvgIconProps> = ({ className, hoverColorClass = 'group-hover:text-teal-300' }) => {
   const svgProps = {
-    className: `w-full h-full object-contain p-8 text-gray-500 transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-teal-300 ${className || ''}`.trim(),
+    className: `w-full h-full object-contain p-8 text-gray-500 transition-all duration-500 ease-in-out group-hover:scale-110 ${hoverColorClass} ${className || ''}`.trim(),
     fill: "currentColor",
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
@@ -21,7 +20,7 @@ const BeetleSvgIcon: React.FC<SvgIconProps> = ({ className }) => {
   );
 };
 
-export const AdephagaImage: React.FC<SvgIconProps> = ({ className }) => <BeetleSvgIcon className={className} />;
-export const PolyphagaImage: React.FC<SvgIconProps> = ({ className }) => <BeetleSvgIcon className={className} />;
-export const ArchostemataImage: React.FC<SvgIconProps> = ({ className }) => <BeetleSvgIcon className={className} />;
-export const MyxophagaImage: React.FC<SvgIconProps> = ({ className }) => <BeetleSvgIcon className={className} />;
+export const AdephagaImage: React.FC<SvgIconProps> = ({ className, hoverColorClass }) => <BeetleSvgIcon className={className} hoverColorClass={hoverColorClass} />;
+export const PolyphagaImage: React.FC<SvgIconProps> = ({ className, hoverColorClass }) => <BeetleSvgIcon className={className} hoverColorClass={hoverColorClass} />;
+export const ArchostemataImage: React.FC<SvgIconProps> = ({ className, hoverColorClass }) => <BeetleSvgIcon className={className} hoverColorClass={hoverColorClass} />;
+export const MyxophagaImage: React.FC<SvgIconProps> = ({ className, hoverColorClass }) => <BeetleSvgIcon className={className} hoverColorClass={hoverColorClass} />;
