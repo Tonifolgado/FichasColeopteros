@@ -17,6 +17,7 @@ export const BEETLE_SUBORDERS: BeetleSuborder[] = [
         'Hygrobiidae', 'Noteridae', 'Amphizoidae', 'Trachypachidae', 'Rhysodidae'
     ],
     commonExamples: 'Calosoma scrutator (buscador de orugas), Cicindela spp. (escarabajos tigre).',
+    color: 'amber',
   },
   {
     name: 'Polyphaga',
@@ -35,6 +36,7 @@ export const BEETLE_SUBORDERS: BeetleSuborder[] = [
         'Coccinellidae', 'Lampyridae', 'Hydrophilidae', 'Silphidae', 'Histeridae'
     ],
     commonExamples: 'Dynastes hercules (escarabajo hércules), Coccinella septempunctata (mariquita de siete puntos).',
+    color: 'emerald',
   },
   {
     name: 'Archostemata',
@@ -50,6 +52,7 @@ export const BEETLE_SUBORDERS: BeetleSuborder[] = [
         'Crowsoniellidae', 'Cupedidae', 'Jurodidae', 'Micromalthidae', 'Ommatidae'
     ],
     commonExamples: 'Tenomerga cinerea, Priacma serrata (escarabajo del cedro telefónico).',
+    color: 'violet',
   },
   {
     name: 'Myxophaga',
@@ -65,5 +68,6 @@ export const BEETLE_SUBORDERS: BeetleSuborder[] = [
         'Hydroscaphidae', 'Microsporidae', 'Sphaeriusidae', 'Torridincolidae'
     ],
     commonExamples: 'Sphaerius acaroides (escarabajo minuto de los pantanos).',
+    color: 'cyan',
   },
 ];

@@ -6,9 +6,16 @@ import { BEETLE_SUBORDERS } from './constants';
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
+  const term = searchTerm.toLowerCase();
   const filteredSuborders = BEETLE_SUBORDERS.filter((suborder) =>
-    suborder.name.toLowerCase().includes(searchTerm.toLowerCase())
+    suborder.name.toLowerCase().includes(term) ||
+    suborder.description.toLowerCase().includes(term) ||
+    suborder.families.some((f) => f.toLowerCase().includes(term))
   );
+
+  const handleFamilyClick = (family: string) => {
+    setSearchTerm(family);
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 font-sans relative overflow-hidden">
@@ -25,7 +32,7 @@ const App: React.FC = () => {
           {filteredSuborders.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
               {filteredSuborders.map((suborder) => (
-                <ClassificationCard key={suborder.name} suborder={suborder} />
+                <ClassificationCard key={suborder.name} suborder={suborder} onFamilyClick={handleFamilyClick} />
               ))}
             </div>
           ) : (
